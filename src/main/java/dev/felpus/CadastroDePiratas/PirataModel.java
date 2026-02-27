@@ -9,22 +9,32 @@ public class PirataModel {
 
     @Id //Fala q o atributo abaixo e o ID
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String nome;
-    int idade;
-    String tripulação;
-    String email;
+    private Long id;
+    private String nome;
+    private int idade;
+    private String tripulacao;
+    private Boolean isAlive;
+    private String email;
 
     public PirataModel() {
     }
 
-    public PirataModel(String nome, int idade, String tripulação, String email) {
+    public PirataModel(Long id, String nome, int idade, String tripulacao, Boolean isAlive, String email) {
+        this.id = id;
         this.nome = nome;
         this.idade = idade;
-        this.tripulação = tripulação;
+        this.tripulacao = tripulacao;
+        this.isAlive = isAlive;
         this.email = email;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;
@@ -42,12 +52,20 @@ public class PirataModel {
         this.idade = idade;
     }
 
-    public String getTripulação() {
-        return tripulação;
+    public String getTripulacao() {
+        return tripulacao;
     }
 
-    public void setTripulação(String tripulação) {
-        this.tripulação = tripulação;
+    public void setTripulacao(String tripulacao) {
+        this.tripulacao = tripulacao;
+    }
+
+    public Boolean getAlive() {
+        return isAlive;
+    }
+
+    public void setAlive(Boolean alive) {
+        isAlive = alive;
     }
 
     public String getEmail() {
