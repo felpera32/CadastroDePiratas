@@ -9,5 +9,4 @@ public class CadastroDePiratasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CadastroDePiratasApplication.class, args);
 	}
-
 }
